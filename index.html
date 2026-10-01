@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Audit de semabeauty.fr · Aureva Digital</title>
+<meta name="description" content="Audit SEO, GEO et expérience de réservation du site de Séma Beauty, Châteaudun.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1d1218;--plum:#34202b;--blush:#f6e9e6;--paper:#fffaf8;--rose:#d4688a;--rose-d:#a8426a;--champ:#e3c3a3;--ink:#2a1d24;--mute:#76646c;--line:#ead9d6;--ok:#3f8f6b;--mid:#d79a3b;--hi:#c8465f;
+--serif:'Bodoni Moda',Georgia,'Times New Roman',serif;--sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:-.01em}
+.bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--rose),var(--champ));z-index:20}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+/* hero */
+.hero{background:radial-gradient(120% 90% at 80% 0%,var(--plum),var(--night) 60%);color:#fff;padding:calc(env(safe-area-inset-top,0px) + 56px) 0 72px;overflow:hidden;position:relative}
+.hero .wrap{display:grid;gap:24px}
+.who{font-size:.9rem;color:var(--champ);letter-spacing:.02em}
+.hero h1{font-size:clamp(2.6rem,9vw,5.4rem);font-weight:700;max-width:12ch}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--rose)}
+.hero p.lead{max-width:46ch;color:#e9d9dd;font-size:1.12rem}
+.meta{font-size:.85rem;color:#bfa9b1}
+.lash{position:absolute;right:-40px;bottom:-30px;width:min(70vw,520px);opacity:.9;pointer-events:none}
+.lash path{fill:none;stroke:var(--rose);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s cubic-bezier(.3,.7,.2,1) forwards}
+.lash path:nth-child(even){stroke:var(--champ)}
+@keyframes draw{to{stroke-dashoffset:0}}
+/* chiffres */
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.facts div{background:var(--paper);padding:28px 24px}
+.facts b{display:block;font-family:var(--serif);font-size:clamp(2.2rem,7vw,3.4rem);font-weight:700;line-height:1;color:var(--rose-d)}
+.facts span{font-size:.92rem;color:var(--mute)}
+@media(min-width:720px){.facts{grid-template-columns:repeat(4,1fr)}}
+/* sections */
+section{padding:72px 0}
+section.tint{background:var(--blush)}
+h2{font-size:clamp(1.9rem,5.5vw,3rem);margin-bottom:20px;max-width:18ch}
+.intro{max-width:62ch;color:var(--mute);margin-bottom:36px}
+.quote{font-family:var(--serif);font-size:clamp(1.35rem,4vw,2rem);line-height:1.35;max-width:30ch;border-left:3px solid var(--rose);padding-left:20px;margin-top:28px}
+/* forces */
+.strong{display:grid;gap:0}
+.strong p{padding:18px 0 18px 36px;border-top:1px solid var(--line);position:relative}
+.strong p::before{content:"";position:absolute;left:4px;top:28px;width:16px;height:8px;border-bottom:2px solid var(--ok);border-left:2px solid var(--ok);transform:rotate(-45deg)}
+.strong p:last-child{border-bottom:1px solid var(--line)}
+/* score */
+.meters{display:grid;gap:18px}
+.row{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center}
+.row span{font-weight:500}
+.row small{color:var(--mute);font-size:.82rem;text-align:right}
+.seg{grid-column:1/-1;display:flex;gap:5px}
+.seg i{flex:1;height:8px;border-radius:8px 2px 8px 2px;background:var(--line);transform-origin:left;transform:scaleX(.2);transition:transform .6s cubic-bezier(.3,.7,.2,1),background .3s}
+.meter.on .seg i.f{transform:scaleX(1);background:var(--c)}
+.meter.on .seg i:nth-child(2){transition-delay:.1s}.meter.on .seg i:nth-child(3){transition-delay:.2s}.meter.on .seg i:nth-child(4){transition-delay:.3s}.meter.on .seg i:nth-child(5){transition-delay:.4s}
+/* constats */
+.grp{margin-top:44px}
+.grp>h3{font-size:1.5rem;display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.grp>h3::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c)}
+details{border-top:1px solid var(--line);padding:0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 40px 18px 0;font-weight:600;position:relative;line-height:1.4}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:1.6rem;font-weight:400;color:var(--rose-d);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details>div{padding:0 0 22px;color:var(--mute);max-width:64ch;animation:open .35s ease}
+details>div b{color:var(--ink);font-weight:600}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}}
+summary:focus-visible,a:focus-visible{outline:2px solid var(--rose-d);outline-offset:3px}
+/* geo */
+.chat{background:var(--night);color:#fff;border-radius:22px;padding:24px;max-width:640px;margin:28px 0}
+.chat .q{background:var(--plum);border-radius:16px 16px 4px 16px;padding:12px 16px;margin-left:auto;width:fit-content;max-width:90%;font-size:.95rem}
+.chat .a{margin-top:16px;border-left:2px solid var(--rose);padding-left:16px;color:#f1e3e6}
+.chat small{display:block;margin-top:14px;color:#a8929b}
+/* archi */
+.tree{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;line-height:2;overflow-x:auto}
+.tree b{color:var(--rose-d);font-weight:600}.tree em{color:var(--mute);font-style:normal}
+/* plan */
+.steps{list-style:none;padding:0;counter-reset:s;border-left:2px solid var(--rose);margin-left:10px}
+.steps li{counter-increment:s;padding:0 0 34px 30px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:-15px;top:0;width:28px;height:28px;border-radius:50%;background:var(--rose);color:#fff;display:grid;place-items:center;font-size:.85rem;font-weight:600}
+.steps h3{font-size:1.35rem;margin-bottom:6px}.steps p{color:var(--mute);max-width:56ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:1px solid var(--rose);color:var(--rose-d);border-radius:99px;padding:6px 14px;font-size:.9rem;background:#fff}
+/* contact */
+.end{background:var(--night);color:#fff;text-align:center;padding:90px 0 calc(90px + env(safe-area-inset-bottom,0px))}
+.end h2{margin-inline:auto;color:#fff}
+.end p{color:#d9c7cd;max-width:44ch;margin:0 auto 32px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 28px;border-radius:99px;text-decoration:none;font-weight:600;transition:transform .2s,background .2s}
+.btn.p{background:var(--rose);color:#fff}.btn.p:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn.s{border:1px solid var(--champ);color:var(--champ)}.btn.s:hover{background:rgba(227,195,163,.12);transform:translateY(-2px)}
+.sig{margin-top:44px;font-size:.88rem;color:#a8929b}
+.vitals{display:grid;gap:18px;margin-bottom:36px}@media(min-width:720px){.vitals{grid-template-columns:repeat(3,1fr)}}
+.vt{border-left:4px solid var(--c);padding:4px 0 4px 18px}.vt b{display:block;font-family:var(--serif);font-size:2rem;line-height:1.15}.vt span{display:block;font-weight:500}.vt small{color:var(--mute)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.lash path{stroke-dashoffset:0}.meter .seg i.f{transform:none;background:var(--c)}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+
+<header class="hero">
+<svg class="lash" viewBox="0 0 400 300" aria-hidden="true">
+<path pathLength="1" d="M200 290C120 250 70 170 40 60"/><path pathLength="1" d="M200 290C140 240 105 160 90 30"/><path pathLength="1" d="M200 290C165 235 140 150 138 10"/><path pathLength="1" d="M200 290C190 230 185 140 190 0"/><path pathLength="1" d="M200 290C215 230 235 145 245 5"/><path pathLength="1" d="M200 290C245 240 290 160 300 25"/><path pathLength="1" d="M200 290C280 255 340 180 365 70"/>
+</svg>
+<div class="wrap">
+<p class="who">Audit réalisé par Aureva Digital pour Séma Beauty</p>
+<h1>Votre réputation est <em>parfaite.</em> Votre site doit l'être aussi.</h1>
+<p class="lead">Analyse de semabeauty.fr : ce qui fonctionne déjà, ce qui retient vos futures clientes, et comment devenir la première adresse citée à Châteaudun sur Google et dans les réponses des IA.</p>
+<p class="meta">1er octobre 2026 · Châteaudun</p>
+</div>
+</header>
+
+<div class="facts wrap" style="max-width:none;padding:0">
+<div><b data-n="5" data-d="1">0</b><span>sur 5 sur Google, 36 avis</span></div>
+<div><b data-n="20" data-s="+">0</b><span>prestations proposées</span></div>
+<div><b data-n="1">0</b><span>seule page pour tout le contenu</span></div>
+<div><b data-n="4">0</b><span>liens dans le menu du site</span></div>
+</div>
+
+<section>
+<div class="wrap">
+<h2>Le constat en bref</h2>
+<p class="intro">Séma Beauty n'a pas un problème de qualité. Vos clientes vous le disent : 5,0 sur 5 sur Google. Le problème, c'est que le site ne le montre pas, ne détaille pas vos prestations et ne laisse à Google comme aux IA qu'une seule page à lire.</p>
+<p class="quote">Une excellente matière première, pas encore structurée pour attirer plus de recherches.</p>
+</div>
+</section>
+
+<section class="tint">
+<div class="wrap">
+<h2>Ce qui fonctionne déjà</h2>
+<div class="strong">
+<p><b>Un positionnement lisible.</b> Institut de beauté et centre de formation à Châteaudun : le titre principal le dit clairement.</p>
+<p><b>Une offre large et précise.</b> Extensions de cils (2D à 8D, fox eyes, wispy), rehaussement, lash botox, browlift, épilation au fil, blanchiment dentaire, détatouage, Korean Lash Lift.</p>
+<p><b>Des outils déjà en place.</b> Réservation en ligne, e-boutique, cartes cadeau de 10 à 300 €, paiement par carte et PayPal.</p>
+<p><b>Des informations fiables.</b> Adresse, téléphone, horaires et carte Google Maps sont identiques à votre fiche Google.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Le niveau, domaine par domaine</h2>
+<p class="intro">Évaluation de l'audit à partir des pages analysées. Les mesures de vitesse sont détaillées plus bas.</p>
+<div class="meters">
+<div class="row meter" style="--c:var(--ok)"><span>Réputation Google</span><small>Excellent</small><div class="seg"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></div></div>
+<div class="row meter" style="--c:var(--ok)"><span>SEO local</span><small>Bonne base</small><div class="seg"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></div></div>
+<div class="row meter" style="--c:var(--mid)"><span>Contenu et structure</span><small>À renforcer</small><div class="seg"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div></div>
+<div class="row meter" style="--c:var(--mid)"><span>Conversion et réservation</span><small>À renforcer</small><div class="seg"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div></div>
+<div class="row meter" style="--c:var(--hi)"><span>Pages par prestation</span><small>À créer</small><div class="seg"><i class="f"></i><i></i><i></i><i></i><i></i></div></div>
+<div class="row meter" style="--c:var(--mid)"><span>Vitesse mobile</span><small>À améliorer</small><div class="seg"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div></div>
+<div class="row meter" style="--c:var(--hi)"><span>Données structurées</span><small>Absentes</small><div class="seg"><i class="f"></i><i></i><i></i><i></i><i></i></div></div>
+<div class="row meter" style="--c:var(--hi)"><span>Visibilité dans les IA</span><small>Potentiel important</small><div class="seg"><i class="f"></i><i></i><i></i><i></i><i></i></div></div>
+</div>
+</div>
+</section>
+
+<section class="tint">
+<div class="wrap">
+<h2>Ce qui vous fait perdre des clientes</h2>
+<p class="intro">Chaque point est observé sur le site, en version mobile. Touchez un constat pour le détail.</p>
+
+<div class="grp" style="--c:var(--hi)"><h3>Priorité haute</h3>
+<details><summary>Tout le contenu tient sur une seule page</summary><div>Prestations, formations et présentation sont regroupées en deux gros blocs de texte. Google ne peut pas répondre à une recherche comme <b>« browlift Châteaudun »</b> avec une page faite pour elle. Il faut une page par prestation et par formation.</div></details>
+<details><summary>Aucune photo de réalisation sur la page d'accueil</summary><div>Ni pose de cils, ni avant/après, ni photo de l'institut ou de l'équipe. Pour un institut du regard, c'est la première preuve de qualité, et la première chose que cherche une cliente.</div></details>
+<details><summary>Vos avis ne sont pas visibles sur le site</summary><div>Votre 5,0 sur 5 reste sur Google. Une section d'avis clientes sur le site rassure, convertit et enrichit le contenu avec les mots que vos clientes emploient.</div></details>
+<details><summary>Un menu à quatre liens seulement</summary><div>Réservation en ligne, e-Boutique, Panier, Connexion. Rien pour accéder aux prestations, aux formations, aux tarifs ou aux contacts.</div></details>
+<details><summary>Les formations n'ont ni programme ni bouton d'inscription</summary><div>Le texte présente les formations, puis s'arrête. Durée, prix, dates, certification éventuelle et démarche d'inscription sont absents.</div></details>
+<details><summary>Le bouton de réservation arrive après un long texte</summary><div>Sur téléphone, le premier écran ne permet pas de réserver. Le seul bouton « Réservation en ligne » apparaît plus bas.</div></details>
+<details><summary>La réservation manque de clarté</summary><div>Deux menus déroulants s'enchaînent sans prix ni durée affichés. <b>« INFORMATIONS RENDEZ VOUS »</b> figure dans la liste comme s'il s'agissait d'un soin à réserver.</div></details>
+</div>
+
+<div class="grp" style="--c:var(--mid)"><h3>Priorité moyenne</h3>
+<details><summary>Une structure de titres à travailler</summary><div>Le titre principal est cohérent, mais la page manque de sous-titres par prestation, de questions fréquentes et d'un bloc « pourquoi nous choisir ». C'est ce qui permet à Google de comprendre la page.</div></details>
+<details><summary>Des blocs de texte longs et compacts</summary><div>Sans sous-titres, listes ni respirations, la lecture sur téléphone est difficile et les informations clés se perdent.</div></details>
+<details><summary>Une information à clarifier sur le dimanche</summary><div>Les horaires indiquent « Dimanche : fermé », alors que la page de réservation mentionne un supplément de 10 € pour un rendez-vous pris un dimanche ou un jour férié. À harmoniser.</div></details>
+<details><summary>La boutique manque de finition</summary><div>Une image est manquante, un nom de produit est coupé, les prix s'affichent deux fois (« 80€ » puis « 80,00 € ») et la boutique ne contient que des cartes cadeau, en 7 produits.</div></details>
+<details><summary>Des boutons coupés sur mobile</summary><div>« CONNEXIO / N » et « S'ENREGIST / RER » se coupent au milieu du mot sur la page Mon compte.</div></details>
+</div>
+
+<div class="grp" style="--c:var(--ok)"><h3>Détails de finition</h3>
+<details><summary>Une icône Google+ et « © 2020 » dans le pied de page</summary><div>Google+ a fermé en 2019, et l'année de 2020 laisse penser que le site n'est plus suivi.</div></details>
+<details><summary>Un nom écrit de deux façons</summary><div>« Séma Beauty » dans le logo, « Sema Beauty » dans les textes. Le logo comporte aussi la mention « professionnal », dont l'orthographe est à vérifier.</div></details>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Être citée par les IA, pas seulement trouvée sur Google</h2>
+<p class="intro">De plus en plus de clientes demandent une adresse à ChatGPT, Gemini ou Google plutôt que de parcourir les résultats. Ces outils citent les sites qui expliquent clairement qui vous êtes, ce que vous faites et où. Aujourd'hui, votre site ne leur offre qu'une seule page de contexte et aucun balisage structuré : elles s'appuient donc sur Planity et PagesJaunes plutôt que sur lui.</p>
+<div class="chat"><div class="q">Quelle est une bonne adresse pour des extensions de cils à Châteaudun ?</div>
+<div class="a">Séma Beauty est un institut de beauté situé à Châteaudun, spécialisé dans les extensions de cils, le rehaussement de cils, le browlift, le blanchiment dentaire et les formations cils et sourcils.</div>
+<small>Réponse visée, avec votre site comme source.</small></div>
+<p class="intro" style="margin-bottom:20px">Pour y arriver, une architecture de pages pensée pour les recherches locales :</p>
+<div class="tree"><b>/institut-beaute-chateaudun/</b><br>├ <b>/extension-cils-chateaudun/</b><br>├ <b>/rehaussement-cils-chateaudun/</b><br>├ <b>/browlift-chateaudun/</b><br>├ <b>/blanchiment-dentaire-chateaudun/</b><br>├ <b>/formation-extension-cils-chateaudun/</b><br>└ <b>/faq/</b> <em>prix, durée d'une pose, cil à cil ou volume russe…</em></div>
+</div>
+</section>
+
+<section class="tint">
+<div class="wrap">
+<h2>Le plan d'action</h2>
+<p class="intro">Dans cet ordre, pour que chaque étape prépare la suivante.</p>
+<ol class="steps">
+<li><h3>Rendre le site convaincant</h3><p>Menu complet, photos de vos réalisations, avis clientes, bouton de réservation visible dès le premier écran, boutique corrigée.</p></li>
+<li><h3>Donner à Google et aux IA de quoi vous citer</h3><p>Une page par prestation et par formation, une FAQ, une structure de titres claire, des images allégées, un site rapide sur mobile, des scripts de boutique chargés seulement où ils servent, et un balisage Schema.org (salon de beauté, adresse, horaires, avis).</p></li>
+<li><h3>Garder l'avance</h3><p>Fiche Google à jour, horaires identiques partout, suivi mensuel de vos positions sur Google et dans les IA, maintenance technique.</p></li>
+</ol>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Vitesse et visibilité : les mesures</h2>
+<p class="intro">Résultats d'analyse sur mobile. Les valeurs sont des estimations en réseau 4G, à confirmer par un test en conditions réelles au démarrage du chantier.</p>
+<div class="vitals">
+<div class="vt" style="--c:var(--hi)"><b>3,8 à 4,6 s</b><span>Affichage du contenu principal (LCP)</span><small>Cible : moins de 2,5 s</small></div>
+<div class="vt" style="--c:var(--mid)"><b>210 à 320 ms</b><span>Réactivité aux clics (INP)</span><small>Cible : moins de 200 ms</small></div>
+<div class="vt" style="--c:var(--mid)"><b>≈ 0,18</b><span>Stabilité de l'affichage (CLS)</span><small>Cible : moins de 0,1</small></div>
+</div>
+<details><summary>Des images trop lourdes</summary><div>Plusieurs visuels dépassent 400 Ko, pour une page de plus de 3,5 Mo. Les formats PNG et JPEG ne sont pas compressés (le WebP est bien plus léger), le chargement différé manque sous la ligne de flottaison et certains textes alternatifs sont partiels, comme « Carte cadeau 30€ ».</div></details>
+<details><summary>Des scripts de boutique chargés partout</summary><div>Les scripts du panier et de la boutique se chargent sur la page d'accueil alors qu'ils n'y servent pas, tout comme des bibliothèques d'icônes et des polices externes. Une grande partie du CSS et du JavaScript chargé à l'arrivée n'est pas utile à l'affichage de l'accueil.</div></details>
+<details><summary>Un affichage qui bouge pendant le chargement</summary><div>Le module de réservation et le carrousel de cartes cadeau s'insèrent sans espace réservé, ce qui décale le contenu et gêne la lecture.</div></details>
+<details><summary>Planity passe devant votre site</summary><div>Sur « extension de cils Châteaudun », le site officiel n'est pas en première position : Planity domine les premiers résultats. Avoir deux liens de réservation (Planity et le site) répartit l'autorité entre les deux au lieu de la concentrer.</div></details>
+<details><summary>Aucun balisage Schema.org</summary><div>Le site n'indique pas clairement à Google et aux IA qu'il s'agit d'un salon de beauté, avec adresse, horaires et avis. C'est la raison pour laquelle elles préfèrent citer Planity et PagesJaunes.</div></details>
+<details><summary>Un titre local, mais sans les prestations clés</summary><div>Le titre de la page cite Châteaudun mais pas les cils ni les extensions. La description, elle, est bien rédigée et contient les bons mots-clés.</div></details>
+<details><summary>Des pages de réservation à verrouiller</summary><div>Les pages générées par la réservation doivent pointer vers l'accueil (balise canonical) pour éviter les contenus en double.</div></details>
+</div>
+</section>
+
+<footer class="end">
+<div class="wrap">
+<h2>Parlons de ce que votre site peut faire pour vous</h2>
+<p>Cet audit est à vous, sans engagement. Je réponds à vos questions avec plaisir.</p>
+<div class="btns"><a class="btn p" href="https://wa.me/2290146893637">Écrire sur WhatsApp</a><a class="btn s" href="mailto:amadeuswp1@gmail.com">Envoyer un e-mail</a></div>
+<p class="sig">Aureva Digital · Création de sites, SEO et automatisation</p>
+</div>
+</footer>
+
+<script>
+(function(){
+var bar=document.getElementById('bar');
+function pg(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+'%'}
+addEventListener('scroll',pg,{passive:true});pg();
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function count(el){var t=+el.dataset.n,d=+(el.dataset.d||0),s=el.dataset.s||'';
+if(reduce){el.textContent=t.toFixed(d).replace('.',',')+s;return}
+var st=null;(function f(ts){st=st||ts;var p=Math.min((ts-st)/1400,1),e=1-Math.pow(1-p,3);
+el.textContent=(t*e).toFixed(d).replace('.',',')+(p===1?s:'');if(p<1)requestAnimationFrame(f)})(performance.now?performance.now():0)}
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+if(e.target.dataset.n)count(e.target);else e.target.classList.add('on');io.unobserve(e.target)})},{threshold:.4});
+document.querySelectorAll('[data-n],.meter').forEach(function(el){io.observe(el)})
+}else{document.querySelectorAll('[data-n]').forEach(count);document.querySelectorAll('.meter').forEach(function(m){m.classList.add('on')})}
+})();
+</script>
+</body>
+</html>
